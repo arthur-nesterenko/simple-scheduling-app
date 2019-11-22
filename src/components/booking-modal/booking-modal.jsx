@@ -10,6 +10,7 @@ const BookingModal = ( {
                            isOpen,
                            slot,
                            onConfirmBooking,
+                           buttonName,
                        } ) => {
     const { checkIsAvailableSlot } = useBookedSlots();
 
@@ -23,7 +24,7 @@ const BookingModal = ( {
 
     return (
         <div>
-            <Button color="primary" disabled={disableBookButton} onClick={onClick}>Book</Button>
+            <Button color="primary" className='text-capitalize' size='lg' disabled={disableBookButton} onClick={onClick}>{buttonName}</Button>
             <Modal isOpen={isOpen} toggle={onClick}>
                 <ModalHeader toggle={onClick}>Slot {slot.start} - {slot.end}</ModalHeader>
                 <ModalBody>
@@ -34,6 +35,10 @@ const BookingModal = ( {
     );
 };
 
+BookingModal.defaultProps = {
+    buttonName: 'Book now',
+};
+
 BookingModal.propTypes = {
     slot: PropTypes.shape( {
         start: PropTypes.string,
@@ -42,6 +47,7 @@ BookingModal.propTypes = {
     onClick: PropTypes.func,
     isOpen: PropTypes.bool,
     onConfirmBooking: PropTypes.func,
+    buttonName: PropTypes.string,
 };
 
 export default BookingModal;
