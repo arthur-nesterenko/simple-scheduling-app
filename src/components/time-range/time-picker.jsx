@@ -42,7 +42,7 @@ const TimePicker = ( { name, onChange, title, value, disabledHours, min, max, di
         return disabled;
     }, [name, disabledMinutes] );
 
-    return <div>
+    return <div className='d-flex flex-column'>
         <small>{title}</small>
         <RcTimePicker
             {...baseProps}
