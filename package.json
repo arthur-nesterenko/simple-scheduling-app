@@ -1,5 +1,9 @@
 {
   "name": "simple-scheduling-app",
+  "homepage": "https://arthur-nesterenko.github.io/simple-scheduling-app",
+  "author": {
+    "name": "Arthur Nesterenko"
+  },
   "version": "0.1.0",
   "private": true,
   "dependencies": {
