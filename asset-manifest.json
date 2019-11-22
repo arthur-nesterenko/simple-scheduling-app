@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.js": "/simple-scheduling-app/static/js/main.e9adc34b.chunk.js",
-    "main.js.map": "/simple-scheduling-app/static/js/main.e9adc34b.chunk.js.map",
+    "main.js": "/simple-scheduling-app/static/js/main.e679087b.chunk.js",
+    "main.js.map": "/simple-scheduling-app/static/js/main.e679087b.chunk.js.map",
     "runtime-main.js": "/simple-scheduling-app/static/js/runtime-main.e557a511.js",
     "runtime-main.js.map": "/simple-scheduling-app/static/js/runtime-main.e557a511.js.map",
     "static/css/2.d32fc048.chunk.css": "/simple-scheduling-app/static/css/2.d32fc048.chunk.css",
-    "static/js/2.de601c00.chunk.js": "/simple-scheduling-app/static/js/2.de601c00.chunk.js",
-    "static/js/2.de601c00.chunk.js.map": "/simple-scheduling-app/static/js/2.de601c00.chunk.js.map",
+    "static/js/2.e37b15d6.chunk.js": "/simple-scheduling-app/static/js/2.e37b15d6.chunk.js",
+    "static/js/2.e37b15d6.chunk.js.map": "/simple-scheduling-app/static/js/2.e37b15d6.chunk.js.map",
     "index.html": "/simple-scheduling-app/index.html",
-    "precache-manifest.cb7211360ba09b43b899c5fa5ee27a24.js": "/simple-scheduling-app/precache-manifest.cb7211360ba09b43b899c5fa5ee27a24.js",
+    "precache-manifest.84ebc953a6bdd90fdad6da9181b23c86.js": "/simple-scheduling-app/precache-manifest.84ebc953a6bdd90fdad6da9181b23c86.js",
     "service-worker.js": "/simple-scheduling-app/service-worker.js",
     "static/css/2.d32fc048.chunk.css.map": "/simple-scheduling-app/static/css/2.d32fc048.chunk.css.map"
   },
   "entrypoints": [
     "static/js/runtime-main.e557a511.js",
     "static/css/2.d32fc048.chunk.css",
-    "static/js/2.de601c00.chunk.js",
-    "static/js/main.e9adc34b.chunk.js"
+    "static/js/2.e37b15d6.chunk.js",
+    "static/js/main.e679087b.chunk.js"
   ]
 }
