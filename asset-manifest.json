@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.js": "/static/js/main.f6198be4.chunk.js",
-    "main.js.map": "/static/js/main.f6198be4.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.f0e670d5.js",
-    "runtime-main.js.map": "/static/js/runtime-main.f0e670d5.js.map",
-    "static/css/2.d32fc048.chunk.css": "/static/css/2.d32fc048.chunk.css",
-    "static/js/2.de601c00.chunk.js": "/static/js/2.de601c00.chunk.js",
-    "static/js/2.de601c00.chunk.js.map": "/static/js/2.de601c00.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.e7ddcb91c570d859623cc6034017d9ac.js": "/precache-manifest.e7ddcb91c570d859623cc6034017d9ac.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.d32fc048.chunk.css.map": "/static/css/2.d32fc048.chunk.css.map"
+    "main.js": "/simple-scheduling-app/static/js/main.e9adc34b.chunk.js",
+    "main.js.map": "/simple-scheduling-app/static/js/main.e9adc34b.chunk.js.map",
+    "runtime-main.js": "/simple-scheduling-app/static/js/runtime-main.e557a511.js",
+    "runtime-main.js.map": "/simple-scheduling-app/static/js/runtime-main.e557a511.js.map",
+    "static/css/2.d32fc048.chunk.css": "/simple-scheduling-app/static/css/2.d32fc048.chunk.css",
+    "static/js/2.de601c00.chunk.js": "/simple-scheduling-app/static/js/2.de601c00.chunk.js",
+    "static/js/2.de601c00.chunk.js.map": "/simple-scheduling-app/static/js/2.de601c00.chunk.js.map",
+    "index.html": "/simple-scheduling-app/index.html",
+    "precache-manifest.cb7211360ba09b43b899c5fa5ee27a24.js": "/simple-scheduling-app/precache-manifest.cb7211360ba09b43b899c5fa5ee27a24.js",
+    "service-worker.js": "/simple-scheduling-app/service-worker.js",
+    "static/css/2.d32fc048.chunk.css.map": "/simple-scheduling-app/static/css/2.d32fc048.chunk.css.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.f0e670d5.js",
+    "static/js/runtime-main.e557a511.js",
     "static/css/2.d32fc048.chunk.css",
     "static/js/2.de601c00.chunk.js",
-    "static/js/main.f6198be4.chunk.js"
+    "static/js/main.e9adc34b.chunk.js"
   ]
 }
