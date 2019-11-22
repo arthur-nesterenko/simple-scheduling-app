@@ -1,5 +1,6 @@
+import PropTypes from 'prop-types';
 import React from 'react';
-import useSessionStorage from './../../hooks/use-session-storage';
+import useSessionStorage from 'hooks/use-session-storage';
 
 /**
  *
@@ -10,16 +11,24 @@ export const BookingProviderContext = React.createContext( {} );
 /**
  *
  * @param children
+ * @param accountName
+ * @param bookTimeRange
  * @returns {*}
  * @constructor
  */
-const BookingProvider = ( { children } ) => {
+const BookingProvider = ( { children, accountName, bookTimeRange } ) => {
 
-    const [initialUsers, updateSessionStorage] = useSessionStorage( 'users', [], false );
+    const [initialUsers, updateSessionStorage] = useSessionStorage( accountName, [], false );
     const [users, setUsers] = React.useState( () => initialUsers );
 
     const addUser = React.useCallback( ( email, slot ) => {
         setUsers( prev => [...prev, { email: email.toLowerCase(), slot }] );
+    }, [] );
+
+    const removeUser = React.useCallback( ( email ) => {
+        if ( hasEmail( email ) ) {
+            setUsers( prev => prev.filter( u => u.email !== email ) );
+        }
     }, [] );
 
     const hasEmail = React.useCallback( ( email ) => {
@@ -35,12 +44,23 @@ const BookingProvider = ( { children } ) => {
         addUser,
         hasEmail,
         users,
-    }), [addUser, hasEmail, users] );
+        bookTimeRange,
+        removeUser,
+    }), [addUser, bookTimeRange, hasEmail, users] );
 
 
     return <BookingProviderContext.Provider value={value}>
         {children}
     </BookingProviderContext.Provider>;
+};
+
+BookingProvider.propTypes = {
+    children: PropTypes.node,
+    accountName: PropTypes.string.isRequired,
+    bookTimeRange: PropTypes.shape( {
+        start: PropTypes.string,
+        end: PropTypes.string,
+    } ),
 };
 
 
