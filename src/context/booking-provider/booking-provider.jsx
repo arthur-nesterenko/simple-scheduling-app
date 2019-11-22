@@ -25,16 +25,17 @@ const BookingProvider = ( { children, accountName, bookTimeRange } ) => {
         setUsers( prev => [...prev, { email: email.toLowerCase(), slot }] );
     }, [] );
 
-    const removeUser = React.useCallback( ( email ) => {
-        if ( hasEmail( email ) ) {
-            setUsers( prev => prev.filter( u => u.email !== email ) );
-        }
-    }, [] );
 
     const hasEmail = React.useCallback( ( email ) => {
         const usersSet = new Set( users.map( user => user.email ) );
         return usersSet.has( email );
     }, [users] );
+
+    const removeUser = React.useCallback( ( email ) => {
+        if ( hasEmail( email ) ) {
+            setUsers( prev => prev.filter( u => u.email !== email ) );
+        }
+    }, [hasEmail] );
 
     React.useEffect( () => {
         updateSessionStorage( users );
@@ -46,7 +47,7 @@ const BookingProvider = ( { children, accountName, bookTimeRange } ) => {
         users,
         bookTimeRange,
         removeUser,
-    }), [addUser, bookTimeRange, hasEmail, users] );
+    }), [addUser, bookTimeRange, hasEmail, removeUser, users] );
 
 
     return <BookingProviderContext.Provider value={value}>

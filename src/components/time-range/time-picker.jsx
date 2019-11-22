@@ -30,7 +30,7 @@ const TimePicker = ( { name, onChange, title, value, disabledHours, min, max, di
         const disableBeforeMin = Array.from( { length: startTime }, ( m, i ) => i );
         const disableAfterMax = getHoursAfterAsNumber( max );
         return disabled.concat( disableBeforeMin, disableAfterMax );
-    }, [disabledHours, name, value] );
+    }, [disabledHours, max, min, name, value] );
 
     const handleDisabledMinutes = React.useCallback( ( h ) => {
         const disabled = disabledMinutes( h, name );
@@ -40,7 +40,7 @@ const TimePicker = ( { name, onChange, title, value, disabledHours, min, max, di
             disabled.push( 30 );
         }
         return disabled;
-    }, [name, disabledMinutes] );
+    }, [disabledMinutes, name, max] );
 
     return <div className='d-flex flex-column'>
         <small>{title}</small>

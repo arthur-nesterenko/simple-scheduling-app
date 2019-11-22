@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Card, CardTitle, CardSubtitle, Button, CardBody, Collapse, CardFooter } from 'reactstrap';
+import { Card, CardTitle, CardSubtitle, Button, CardBody, Collapse } from 'reactstrap';
 import useToggle from 'hooks/use-toggle';
 import TimeRange from 'components/time-range';
 import useBookedSlots from 'hooks/use-booked-slots';
@@ -13,7 +13,7 @@ const Account = ( { accountTitle, slotRange } ) => {
     const { getFirstAvailableSlots, isBooked, bookedSlots } = useBookedSlots();
 
 
-    const getAvailableSlots = () => getFirstAvailableSlots( slotRange );
+    const getAvailableSlots = React.useCallback( () => getFirstAvailableSlots( slotRange ), [getFirstAvailableSlots, slotRange] );
 
     const [selectedSlot, setSelectedSlot] = React.useState( getAvailableSlots );
 
@@ -26,7 +26,7 @@ const Account = ( { accountTitle, slotRange } ) => {
         if ( selectedSlot && isBooked( selectedSlot ) ) {
             setSelectedSlot( () => getAvailableSlots() );
         }
-    }, [bookedSlots, selectedSlot] );
+    }, [bookedSlots, getAvailableSlots, isBooked, selectedSlot] );
 
 
     return <Card>
